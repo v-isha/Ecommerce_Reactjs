@@ -2,15 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import Badge from '@mui/material/Badge';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-// import { Search, ShoppingCartOutlined } from "@material-ui/icons";
-
-// const Container = styled.div`
-//       height:50px;
-//       background-color:black;
-// `
+import {mobile} from '../Responsive.js'
+// import {Link} from "react-router-dom";
 const Container = styled.div`
   height: 60px;
-  background-color:#E9D5DA; 
+  background-color:#E9D5DA;
+  ${mobile({ height:"50px", background:"pink"  })}
 `;
 
 const Wrapper = styled.div`
@@ -31,12 +28,14 @@ const Left = styled.div`
 const Center = styled.div`
   flex: 1;
   text-align: center;
+  ${mobile({ display:"none"  })}
 `;
 
 const Logo = styled.h1`
   font-weight: 300;
   color:#16213E;
   font-size:30px;
+  ${mobile({fontSize: "20px"  })}
 `;
 const Right = styled.div`
   flex: 1;
@@ -44,12 +43,15 @@ const Right = styled.div`
   align-items: center;
   justify-content: flex-end;
   
+
+  
 `;
 
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
+  ${mobile({fontSize: "10px"  })}
   
 `;
 
@@ -59,19 +61,24 @@ const Navbar = () => {
     <Container>
             <Wrapper>
                         <Left>
+                          {/* <Link to="/"> <Logo >MONKEYKEEN</Logo></Link> */}
                           <Logo >MONKEYKEEN</Logo>
+                         
                         </Left>
                         <Center>
                           
                         </Center>
                         <Right>
+                          {/* <Link to="/register"><MenuItem>REGISTER</MenuItem></Link> */}
                           <MenuItem>REGISTER</MenuItem>
                           <MenuItem>SIGN IN</MenuItem>
+                          
                           <MenuItem>
                             <Badge badgeContent={4} color="primary">
-                              <AddShoppingCartIcon/>
+                              <AddShoppingCartIcon />
                             </Badge>
                           </MenuItem>
+                          
                         </Right>    
               </Wrapper>
     </Container>

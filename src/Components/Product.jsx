@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import SearchIcon from '@mui/icons-material/Search';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-
+// import {Link} from "react-router-dom";
 
 
 const Info = styled.div`
@@ -76,7 +76,9 @@ const Product = ({item}) => {
   return (
     <Container>
     <Circle />
+    {/* <Link to="/product"><Image src={item.img} /></Link> */}
     <Image src={item.img} />
+    
     <Info>
       <Icon>
         <ShoppingCartCheckoutIcon/>        

@@ -3,6 +3,7 @@ import Footer from '../Components/Footer.jsx'
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import styled from "styled-components";
+import Deal from '../Components/Deal.jsx';
 
 
 const Container = styled.div``;
@@ -168,6 +169,7 @@ const Cart = () => {
   return (
     <Container>
     <Navbar />
+    <Deal/>
     <Wrapper>
       <Title>YOUR BAG</Title>
       <Top>
@@ -229,6 +231,32 @@ const Cart = () => {
                 <RemoveIcon />
               </ProductAmountContainer>
               <ProductPrice>$ 20</ProductPrice>
+            </PriceDetail>
+          </Product>
+          <Hr/>
+          <Product>
+            <ProductDetail>
+              <Image src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1614188818-TD1MTHU_SHOE_ANGLE_GLOBAL_MENS_TREE_DASHERS_THUNDER_b01b1013-cd8d-48e7-bed9-52db26515dc4.png?crop=1xw:1.00xh;center,top&resize=480%3A%2A" />
+              <Details>
+                <ProductName>
+                  <b>Product:</b> JESSIE THUNDER SHOES
+                </ProductName>
+                <ProductId>
+                  <b>ID:</b> 93813718293
+                </ProductId>
+                <ProductColor color="black" />
+                <ProductSize>
+                  <b>Size:</b> 37.5
+                </ProductSize>
+              </Details>
+            </ProductDetail>
+            <PriceDetail>
+              <ProductAmountContainer>
+                <AddIcon />
+                <ProductAmount>2</ProductAmount>
+                <RemoveIcon />
+              </ProductAmountContainer>
+              <ProductPrice>$ 30</ProductPrice>
             </PriceDetail>
           </Product>
         </Info>
